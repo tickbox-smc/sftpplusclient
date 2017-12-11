@@ -1,4 +1,4 @@
-class download (
+class sftpplusclient::download (
 
   String $proatria_dl       = ::sftpplusclient::proatria_dl,
   String $major_version     = ::sftpplusclient::major_version,
