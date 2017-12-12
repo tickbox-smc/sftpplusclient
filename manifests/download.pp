@@ -7,6 +7,8 @@ class sftpplusclient::download (
   String $download_location = '/deployment',
   Integer $timeout          = 60,
   Boolean $verbose          = true,
+  String $sftpplus_user     = 'vagrant',
+  String $sftpplus_group    = 'vagrant',
 
 ){
 
@@ -16,8 +18,8 @@ class sftpplusclient::download (
 
     ensure => 'directory',
     mode   => '0755',
-    owner  => 'root',
-    group  => 'root',  
+    owner  => $sftpplus_user,
+    group  => $sftpplus_group,  
 
   }
 
